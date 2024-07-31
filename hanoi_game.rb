@@ -20,7 +20,7 @@ class HanoiGame
     @ui = UI.new([@A, @B, @C], disk_count, visualization_speed, @moves)
   end
 
-  # Runs the game. Moves the disks until the ending condition is met. Asks the UI object (created in the constructor) for displaying the game. Return the total number of moves.
+  # Runs the game. Moves the disks until the ending condition is met. Asks the UI object (created in the constructor) for displaying the game. Returns the total number of moves.
   def run
     until check_ending_condition()
       [[@A, @B], [@A, @C], [@B, @C]].each do |peg1, peg2|
